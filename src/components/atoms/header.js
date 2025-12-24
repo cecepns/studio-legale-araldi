@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const MENU = [
   { name: "HOME", path: "/" },
@@ -33,10 +34,12 @@ export const Header = ({ isDark = false }) => {
       >
         <div className="container mx-auto w-full text-white flex justify-between items-center p-5 relative z-[102]">
           <Link href="/">
-            <img
+            <Image
               src="/assets/images/logo-with-bg.png"
-              className="w-12 md:w-16 h-auto"
               alt="Logo"
+              width={64}
+              height={64}
+              className="w-12 md:w-16 h-auto"
             />
           </Link>
 

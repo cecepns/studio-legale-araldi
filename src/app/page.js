@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import { Button, Footer, Header } from "@/components/atoms";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -63,7 +64,7 @@ export default function Home() {
               About Us
             </h5>
             <h2 className="text-4xl md:text-5xl text-slate-900 mb-6">
-              We're Advocates for <br /> Justice and Right
+              We&apos;re Advocates for <br /> Justice and Right
             </h2>
             <div className="text-slate-700 text-xl mb-8 leading-relaxed">
               We are dedicated advocates for justice and your legal rights.{" "}
@@ -72,8 +73,11 @@ export default function Home() {
             </div>
           </div>
 
-          <img 
+          <Image 
             src="/assets/images/talent-1.jpg" 
+            alt="Legal professionals"
+            width={600}
+            height={400}
             className="rounded-md" 
             data-aos="fade-left"
           />
@@ -101,7 +105,7 @@ export default function Home() {
           <div data-aos="fade-up" data-aos-delay="100">
             <p className="text-5xl text-[#3d9991] font-light">100%</p>
             <p className="mt-3 font-semibold text-gray-800">
-              On Human Rights Campaign Foundation's 2025
+              On Human Rights Campaign Foundation&apos;s 2025
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="200">
@@ -134,9 +138,11 @@ export default function Home() {
       <section className="container mx-auto px-4 md:px-0">
         <div className="grid md:grid-cols-2 md:gap-12">
           <div className="text-center" data-aos="fade-up" data-aos-delay="0">
-            <img
+            <Image
               src="/assets/images/card-1.jpg"
               alt="About"
+              width={600}
+              height={400}
               className="mx-auto mb-6 w-full h-auto object-cover"
             />
             <h3 className="text-[#3d9991] text-2xl tracking-widest uppercase mb-3">
@@ -152,9 +158,11 @@ export default function Home() {
           </div>
 
           <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-            <img
+            <Image
               src="/assets/images/card-2.jpg"
               alt="Talk to Us"
+              width={600}
+              height={400}
               className="mx-auto mb-6 w-full h-auto object-cover"
             />
             <h3 className="text-[#3d9991] text-2xl tracking-widest uppercase mb-3">
