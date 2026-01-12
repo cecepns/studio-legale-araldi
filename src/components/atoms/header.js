@@ -35,11 +35,11 @@ export const Header = ({ isDark = false }) => {
         <div className="container mx-auto w-full text-white flex justify-between items-center p-5 relative z-[102]">
           <Link href="/">
             <Image
-              src="/assets/images/logo-with-bg.png"
+              src="/assets/images/logo-with-text.jpg"
               alt="Logo"
               width={64}
               height={64}
-              className="w-12 md:w-16 h-auto"
+              className="w-16 sm:w-20 md:w-24 h-auto"
             />
           </Link>
 
@@ -89,45 +89,22 @@ export const Header = ({ isDark = false }) => {
           
           {/* Menu Panel */}
           <div
-            className={`fixed inset-0 top-24 flex flex-col items-start px-8 py-6 gap-0 md:hidden z-[101] overflow-y-auto ${
+            className={`fixed inset-0 pt-24 flex flex-col md:hidden z-[101] overflow-y-auto ${
               isDark ? "bg-[#1f1f1f]" : "bg-black"
             }`}
           >
-            {/* Close Button */}
-            <div className="w-full flex justify-end mb-4">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-white hover:opacity-80 transition-opacity p-2"
-                aria-label="Close menu"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div className="flex-1 w-full px-8 py-6">
+              {MENU.map((data, idx) => (
+                <Link
+                  key={idx}
+                  href={data.path}
+                  className="block text-xl w-full border-b border-white/30 py-4 cursor-pointer hover:opacity-80 transition-opacity uppercase"
+                  onClick={() => setIsOpen(false)}
                 >
-                  <path
-                    d="M18 6L6 18M6 6L18 18"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+                  {data.name}
+                </Link>
+              ))}
             </div>
-
-            {MENU.map((data, idx) => (
-              <Link
-                key={idx}
-                href={data.path}
-                className="text-xl w-full border-b border-white/30 py-4 cursor-pointer hover:opacity-80 transition-opacity uppercase"
-                onClick={() => setIsOpen(false)}
-              >
-                {data.name}
-              </Link>
-            ))}
           </div>
         </>
       )}

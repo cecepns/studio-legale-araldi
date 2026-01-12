@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="font-[family-name:var(--font-geist-sans)] space-y-8 md:space-y-24">
-      <div className="relative w-full min-h-screen overflow-hidden">
+      <div className="relative w-full md:min-h-screen overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
@@ -29,30 +29,109 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-black/40" />
 
+        {/* Nature-themed decorative elements */}
+        <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
+          {/* Mountains silhouette */}
+          <svg
+            className="absolute bottom-0 w-full h-1/3 opacity-20"
+            viewBox="0 0 1200 400"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0,400 L0,300 Q150,250 300,280 T600,260 T900,240 T1200,220 L1200,400 Z"
+              fill="url(#mountainGradient)"
+            />
+            <defs>
+              <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#2d5016" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#1a3009" stopOpacity="0.4" />
+              </linearGradient>
+            </defs>
+          </svg>
+          
+          {/* Trees silhouette */}
+          <svg
+            className="absolute bottom-0 left-0 w-1/4 h-1/4 opacity-15 hidden md:block"
+            viewBox="0 0 200 300"
+            preserveAspectRatio="xMidYMax meet"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100,300 L80,250 L60,200 L50,150 L60,100 L80,80 L100,50 L120,80 L140,100 L150,150 L140,200 L120,250 Z"
+              fill="#1a3009"
+            />
+            <rect x="95" y="250" width="10" height="50" fill="#3d2817" />
+          </svg>
+          
+          <svg
+            className="absolute bottom-0 right-0 w-1/5 h-1/3 opacity-15 hidden md:block"
+            viewBox="0 0 150 250"
+            preserveAspectRatio="xMidYMax meet"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M75,250 L60,200 L45,150 L40,100 L45,70 L60,50 L75,30 L90,50 L105,70 L110,100 L105,150 L90,200 Z"
+              fill="#1a3009"
+            />
+            <rect x="70" y="200" width="10" height="50" fill="#3d2817" />
+          </svg>
+        </div>
+
         <div className="relative z-10">
           <Header />
 
           <div
-            className="flex flex-col items-center justify-center h-screen gap-8"
+            className="flex flex-col items-center justify-center min-h-screen px-4 py-20 md:py-0 gap-4 md:gap-6 lg:gap-8"
             data-aos="fade-up"
           >
-            <h1 className="text-white text-3xl md:text-7xl" data-aos="fade-up" data-aos-delay="0">
-              We are Specialise In
-            </h1>
-            <h1 className="text-white text-3xl md:text-7xl" data-aos="fade-up" data-aos-delay="100">
-              All Criminal & Civil
-            </h1>
-            <h1 className="text-white text-3xl md:text-7xl" data-aos="fade-up" data-aos-delay="200">
-              Laws
-            </h1>
-            <Button
-              variant="outline"
-              size="lg"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              LEARN MORE
-            </Button>
+            <div className="text-center space-y-2 md:space-y-4">
+              <h1 
+                className="text-white text-3xl md:text-5xl lg:text-7xl font-bold leading-tight tracking-tight"
+                data-aos="fade-up" 
+                data-aos-delay="0"
+                style={{ 
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+                  letterSpacing: '-0.02em'
+                }}
+              >
+                We are Specialise In
+              </h1>
+              <h1 
+                className="text-white text-3xl md:text-5xl lg:text-7xl font-bold leading-tight tracking-tight"
+                data-aos="fade-up" 
+                data-aos-delay="100"
+                style={{ 
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+                  letterSpacing: '-0.02em'
+                }}
+              >
+                All Criminal & Civil
+              </h1>
+              <h1 
+                className="text-white text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight tracking-tight"
+                data-aos="fade-up" 
+                data-aos-delay="200"
+                style={{ 
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+                  letterSpacing: '-0.02em'
+                }}
+              >
+                Laws
+              </h1>
+            </div>
+            <div className="mt-4 md:mt-6" data-aos="fade-up" data-aos-delay="300">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-sm md:text-base px-6 md:px-8 py-3 md:py-4"
+              >
+                LEARN MORE
+              </Button>
+            </div>
           </div>
         </div>
       </div>

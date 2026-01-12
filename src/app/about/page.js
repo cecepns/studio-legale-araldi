@@ -62,15 +62,30 @@ export default function About() {
         <div className="relative z-10">
           <Header />
 
-          <div className="flex flex-col items-center justify-center h-[40vh]">
+          <div className="flex flex-col items-center justify-center min-h-[40vh] px-4 py-12 md:py-0">
             <div
-              className="flex flex-col items-center justify-center gap-6 px-6"
+              className="flex flex-col items-center justify-center gap-4 md:gap-6 px-6 text-center"
               data-aos="fade-up"
             >
-              <h1 className="text-white text-4xl md:text-7xl font-bold" data-aos="fade-up" data-aos-delay="0">
+              <h1 
+                className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" 
+                data-aos="fade-up" 
+                data-aos-delay="0"
+                style={{ 
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+                  letterSpacing: '-0.02em'
+                }}
+              >
                 About
               </h1>
-              <p className="text-white text-lg md:text-xl text-center max-w-2xl" data-aos="fade-up" data-aos-delay="100">
+              <p 
+                className="text-white text-base sm:text-lg md:text-xl text-center max-w-2xl leading-relaxed" 
+                data-aos="fade-up" 
+                data-aos-delay="100"
+                style={{ 
+                  textShadow: '1px 1px 4px rgba(0,0,0,0.5)'
+                }}
+              >
                 Learn more about our firm and what sets us apart
               </p>
             </div>
